@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <form name='myform'>
+        <h1>Contact Us</h1>
+        <p>First Name <input type="text" name="T1" size="30"></p>
+        <p>Last Name <input type="text" name="T2" size="30"></p>
+        <p>Email <input type="text" name="T3" size="20"></p>
+        <button onclick='myFunction()'>Submit</button>
+
+        <p id="demo"></p>
+    </form>
+    <script>
+        function myFunction() {
+            var fname = document.myform.T1.value;
+            var lname = document.myform.T2.value;
+            var mail = document.myform.T3.value;
+
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            let text;
+
+            if (fname == null || fname == "") {
+                alert("First Name can't be blank");
+                return false;
+            }
+            else if (lname == null || lname == "") {
+                alert("Last Name can't be blank");
+                return false;
+            }
+            else if (!mail.match(validRegex)) {
+                alert("Invalid Mail Type");
+                return false;
+            }
+            else {
+                text = 'All OK';
+                alert("All ok");
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
