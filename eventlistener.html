@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener in JavaScript</title>
+</head>
+<body>
+    <button id="myBtn">Click Me</button>
+    <script>
+        function firstFunction()
+        {
+            alert("the first function is executed");
+        }
+        function secondFunction()
+        {
+            alert("the Second function is executed");
+        }
+        var Btn = document.getElementById("myBtn");
+        Btn.onclick=firstFunction;
+        //Btn.onclick=secondFunction;
+    </script>
+</body>
+</html>
